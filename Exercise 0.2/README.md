@@ -31,8 +31,8 @@ The project has been refactored into the following clean structure:
 
 ## Generative AI Reflection
 
-- **Which tool(s) you used (if any)**: ChatGPT/GitHub Copilot/Gemini
-- **What you used GenAI for**: Used Generative AI models for restructuring the website, refactoring inline code into external CSS and JavaScript files, and scaffolding boilerplate HTML structural code.
-- **What you changed or adapted after generation**: Extracted the Tailwind configuration object into a standalone file `tailwind-config.js` to ensure the CDN properly loads the theme across all pages. Adjusted path routing and linked the local `PowerIcon.png` logo correctly in headers.
-- **What you learned from using GenAI**: Generative AI significantly speeds up the grunt work of moving code around and establishing proper HTML5 multi-page foundations, while still requiring architectural guidance.
-- **Any limitations or issues you encountered**: GenAI initially tends to keep all CSS and scripts inline because it processes one file at a time; explicit prompting is required to restructure scattered files into standard `assets/` subdirectories.
+- **Which tool(s) you used (if any)**: Gemini / ChatGPT
+- **What you used GenAI for**: I used Generative AI to scaffold the complex pure CSS Grid layout (the "Bento Box" design on the Televisions page) and to write the core logic for the interactive Energy Calculator in JavaScript.
+- **What you changed or adapted after generation**: The AI initially used the Tailwind CSS framework, which violated the assignment constraints. I had to identify this and prompt the AI to completely rewrite the layout into 100% Vanilla CSS. I also manually adapted the CSS to fix UI bugs, such as removing the duplicate native dropdown arrow in the select menu using `appearance: none;`.
+- **What you learned from using GenAI**: By reviewing the generated code, I learned how to use CSS Grid (`grid-template-columns` and `grid-column: span 2`) to create asymmetrical responsive layouts. In JavaScript, I learned how to safely handle user input validation (checking for `isNaN`) and how to format output as currency using `Intl.NumberFormat`.
+- **Any limitations or issues you encountered**: A major limitation is that AI often ignores specific project constraints (like "no external CSS frameworks") unless explicitly reminded. It focuses on the quickest solution rather than the required academic approach, meaning human code-review and iterative prompting are absolutely essential to avoid losing marks.
