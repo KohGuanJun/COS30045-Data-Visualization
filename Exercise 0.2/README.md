@@ -31,7 +31,7 @@ The project has been refactored into the following clean structure:
 
 ## Generative AI Reflection
 
-- **Which tool(s) you used (if any)**: Gemini / ChatGPT
+- **Which tool(s) you used (if any)**: Gemini 
 - **What you used GenAI for**: I used Generative AI to scaffold the complex pure CSS Grid layout (the "Bento Box" design on the Televisions page) and to write the core logic for the interactive Energy Calculator in JavaScript.
 - **What you changed or adapted after generation**: The AI initially used the Tailwind CSS framework, which violated the assignment constraints. I had to identify this and prompt the AI to completely rewrite the layout into 100% Vanilla CSS. I also manually adapted the CSS to fix UI bugs, such as removing the duplicate native dropdown arrow in the select menu using `appearance: none;`.
 - **What you learned from using GenAI**: By reviewing the generated code, I learned how to use CSS Grid (`grid-template-columns` and `grid-column: span 2`) to create asymmetrical responsive layouts. In JavaScript, I learned how to safely handle user input validation (checking for `isNaN`) and how to format output as currency using `Intl.NumberFormat`.
