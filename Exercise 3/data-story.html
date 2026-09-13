@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>VoltWise - Data Story</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script src="assets/js/scripts.js" defer></script>
+</head>
+<body>
+    <header class="site-header" style="background: white; border-bottom: 1px solid #e2e8f0;">
+        <div class="container header-content">
+            <a class="brand-link" href="index.html">
+                <img alt="Power Logo" class="brand-logo" src="assets/img/PowerIcon.png"/>
+                <span class="font-title" style="color: #0f172a;">Appliance Energy Consumption Website</span>
+            </a>
+            <nav class="main-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="televisions.html">Televisions</a>
+                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link active" href="data-story.html">Data Story</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="story-container">
+        
+        <!-- HERO -->
+        <div class="story-hero">
+            <div class="story-hero-text">
+                <span class="story-tagline">
+                    [ DATA STORY ] • ENERGY INVESTIGATION
+                </span>
+                <h1 class="story-title">The Big Screen Trap:<br>Size vs. Tech vs. Energy</h1>
+                <p class="story-subtitle">
+                    Consumers often buy the biggest TV they can afford, completely ignoring the massive hidden long-term electricity costs. Let's explore the data to find the sweet spot between screen size and energy efficiency.
+                </p>
+                <div class="story-meta">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#006d5b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    Based on empirical dataset of 4,700+ consumer television models
+                </div>
+            </div>
+            
+            <div class="takeaway-card">
+                <div class="takeaway-header">
+                    <span>QUICK TAKEAWAY</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#006d5b" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </div>
+                <div class="takeaway-value">~5x Energy</div>
+                <div class="takeaway-desc">Difference between Large vs. Small models regardless of panel brand.</div>
+            </div>
+        </div>
+
+        <!-- SECTION 1 -->
+        <div class="story-card">
+            <div class="story-content">
+                <span class="badge badge-teal">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="8" y2="16"></line><line x1="16" y1="10" x2="16" y2="16"></line></svg>
+                    MARKET SHARE INSIGHT
+                </span>
+                <h2 class="section-title text-teal">1. The Market Context</h2>
+                <p class="text-gray">
+                    When looking at what consumers are buying, LCD (LED) currently dominates the market sales by a landslide. OLED remains a premium, niche choice. But is LED popular just because it is cheaper to buy upfront, or is it actually more energy-efficient in the long run?
+                </p>
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-val text-blue">3,819</div>
+                        <div class="stat-label">LCD (LED)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-val" style="color: #16a34a;">585</div>
+                        <div class="stat-label">Standard LCD</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-val" style="color: #ea580c;">320</div>
+                        <div class="stat-label">OLED</div>
+                    </div>
+                </div>
+            </div>
+            <div class="story-visual">
+                <img src="assets/img/tech-sales.png" alt="Sales by Screen Tech">
+            </div>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="story-card reverse">
+            <div class="story-content">
+                <span class="badge badge-blue">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                    THE EXPONENTIAL CURVE
+                </span>
+                <h2 class="section-title text-blue">2. The Size Factor</h2>
+                <p class="text-gray">
+                    The data reveals a hard truth: energy consumption skyrockets as TV size increases from Small to Large. A large TV consumes nearly <strong>5 times the average energy</strong> of a small TV. The size of the screen is the absolute biggest driver of your electricity bill.
+                </p>
+                <div class="info-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0369a1" stroke-width="2" style="flex-shrink:0;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    <div>Moving up just one tier from Medium (50"-55") to Large (65"-75"+) nearly doubles your baseline annual kilowatt draw, adding - annually per display.</div>
+                </div>
+            </div>
+            <div class="story-visual">
+                <img src="assets/img/size-energy.png" alt="Energy by Size Category">
+            </div>
+        </div>
+
+        <!-- SECTION 3 -->
+        <div class="story-card">
+            <div class="story-content">
+                <span class="badge badge-teal">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    PHYSICAL DIMENSIONS
+                </span>
+                <h2 class="section-title text-teal">3. OLED's Premium Placement</h2>
+                <p class="text-gray">
+                    Furthermore, looking at average screen sizes by technology, OLED TVs are typically manufactured in massive sizes (averaging over 160cm). If you are buying OLED, you are almost certainly buying a very large, power-hungry screen.
+                </p>
+                <ul class="check-list">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        OLED manufacturers focus almost exclusively on large living room centerpieces (55" to 83").
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        Budget LCDs still dominate smaller kitchen and bedroom form factors (24" to 43").
+                    </li>
+                </ul>
+            </div>
+            <div class="story-visual">
+                <img src="assets/img/tech-size.png" alt="Average Size by Tech">
+            </div>
+        </div>
+
+        <!-- SECTION 4 -->
+        <div class="story-card col">
+            <div style="max-width: 800px; margin: 0 auto 32px;">
+                <span class="badge badge-red">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    COMPLETE EMPIRICAL PICTURE
+                </span>
+                <h2 class="section-title text-red">4. The Ultimate Breakdown: Size vs. Tech vs. Energy</h2>
+                <p class="text-gray">
+                    This final chart reveals the complete picture. In small TVs, OLED consumes significantly more power than standard LCD. However, in large TVs, the energy gap between LED and OLED is surprisingly minimal.
+                </p>
+            </div>
+            <div class="story-visual" style="width: 100%;">
+                <img src="assets/img/grouped-breakdown.png" alt="Ultimate Breakdown">
+            </div>
+        </div>
+
+        <!-- RECOMMENDATION -->
+        <div class="recommendation-card">
+            <h2 class="rec-title">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path></svg>
+                Final Buying Recommendation
+            </h2>
+            <p class="rec-text">
+                <strong style="color:#006d5b;">For small bedroom TVs:</strong> Avoid OLED to save energy; stick to standard LCD.<br><br>
+                <strong style="color:#006d5b;">For large living room TVs:</strong> The energy gap between panel technologies is minimal—so buy only the size you <em>truly</em> need, because <strong>size dictates your bill much more than the panel technology!</strong>
+            </p>
+            
+            <div class="btn-group">
+                <a href="#" class="btn-solid">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                    Calculate TV Energy Cost
+                </a>
+                <a href="#" class="btn-outline">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Export Dataset Summary
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <p class="font-label">© 2026 Appliance Energy Consumption Website. Designed by Koh Guan Jun (J22038618).</p>
+                <p class="font-label-sm text-on-surface-variant">Environmental consciousness through data precision.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
