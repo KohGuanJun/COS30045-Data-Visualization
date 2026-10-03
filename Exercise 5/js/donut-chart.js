@@ -39,7 +39,7 @@ const drawDonutChart = data => {
     // 6. Create the Arc Generator (Drawing Engine)
     const arcGenerator = d3.arc()
         // innerRadius > 0 turns it into a Donut! (60% of outer radius)
-        .innerRadius(radius * 0.6)
+        .innerRadius(radius * 0.45)
         .outerRadius(radius)
         // Bonus styling: padAngle adds gaps between slices, cornerRadius rounds the edges
         .padAngle(0.03)
@@ -59,7 +59,7 @@ const drawDonutChart = data => {
         // arcGenerator.centroid(d) perfectly calculates the [x, y] of the exact middle of the slice!
         .attr("transform", d => `translate(${arcGenerator.centroid(d)})`)
         .attr("text-anchor", "middle")
-        .style("font-size", "14px")
+        .style("font-size", "13px")`n        .style("text-shadow", "1px 1px 3px rgba(0,0,0,0.8)")
         .style("font-weight", "bold")
         .style("fill", "#fff")
         // Display the size category and its count
@@ -77,3 +77,4 @@ d3.csv("data/Data_exercise 5.3.csv", d => {
     console.log("Loaded Donut Chart Data:", data);
     drawDonutChart(data);
 });
+
