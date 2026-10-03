@@ -3,8 +3,8 @@
 const drawLineChart = data => {
     // 1. Setup margins and dimensions (same as Ex 5.1 for consistency)
     const margin = { top: 40, right: 40, bottom: 60, left: 60 };
-    const width = 600;
-    const height = 500;
+    const width = 800;
+    const height = 400;
     
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
@@ -49,8 +49,7 @@ const drawLineChart = data => {
     innerChart.append("text")
         .text("Average Price ($ / MWh)")
         .attr("y", -15)
-        .attr("x", 0)
-        .attr("text-anchor", "middle")
+        .attr("x", -30)`n        .attr("text-anchor", "start")
         .style("font-size", "14px")
         .style("font-weight", "bold");
 
@@ -91,3 +90,4 @@ d3.csv("data/ARE_Spot_Prices.csv", d => {
     console.log("Loaded Line Chart Data:", data);
     drawLineChart(data);
 });
+

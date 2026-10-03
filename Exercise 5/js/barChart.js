@@ -3,8 +3,8 @@
 const drawBarChart = data => {
     // 1. Setup margins and dimensions
     const margin = { top: 40, right: 40, bottom: 60, left: 60 };
-    const width = 600;
-    const height = 500;
+    const width = 800;
+    const height = 400;
     
     // Calculate inner dimensions
     const innerWidth = width - margin.left - margin.right;
@@ -48,8 +48,7 @@ const drawBarChart = data => {
     innerChart.append("text")
         .text("Energy Consumption (kWh/year)")
         .attr("y", -15) 
-        .attr("x", 0)
-        .attr("text-anchor", "middle")
+        .attr("x", -30)`n        .attr("text-anchor", "start")
         .style("font-size", "14px")
         .style("font-weight", "bold");
 
@@ -76,3 +75,4 @@ d3.csv("data/tv_energy.csv", d => {
     console.log("Cleaned and Sorted 55-inch TV Data:", data);
     drawBarChart(data);
 });
+
