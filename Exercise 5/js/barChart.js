@@ -48,7 +48,8 @@ const drawBarChart = data => {
     innerChart.append("text")
         .text("Energy Consumption (kWh/year)")
         .attr("y", -15) 
-        .attr("x", -30)`n        .attr("text-anchor", "start")
+        .attr('x', -30)
+        .attr('text-anchor', 'start')
         .style("font-size", "14px")
         .style("font-weight", "bold");
 
@@ -75,4 +76,5 @@ d3.csv("data/tv_energy.csv", d => {
     console.log("Cleaned and Sorted 55-inch TV Data:", data);
     drawBarChart(data);
 });
+
 

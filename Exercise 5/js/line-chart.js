@@ -49,7 +49,8 @@ const drawLineChart = data => {
     innerChart.append("text")
         .text("Average Price ($ / MWh)")
         .attr("y", -15)
-        .attr("x", -30)`n        .attr("text-anchor", "start")
+        .attr('x', -30)
+        .attr('text-anchor', 'start')
         .style("font-size", "14px")
         .style("font-weight", "bold");
 
@@ -90,4 +91,5 @@ d3.csv("data/ARE_Spot_Prices.csv", d => {
     console.log("Loaded Line Chart Data:", data);
     drawLineChart(data);
 });
+
 
