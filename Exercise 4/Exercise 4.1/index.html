@@ -180,71 +180,117 @@
             </tbody>
         </table>
     </div>
-    <!-- ================= PROPERTY COMPARISON TABLE ================= -->
+        <!-- ================= PROPERTY COMPARISON TABLE ================= -->
     <div class="instructions" style="margin-top: 40px; margin-bottom: 60px;">
-        <h2>Element Properties Comparison</h2>
+        <h2>Complete Element Properties Comparison (Before vs After)</h2>
         <table class="comparison-table">
             <thead>
                 <tr>
                     <th>Element</th>
-                    <th>Before</th>
-                    <th>After</th>
+                    <th>Before (Initial Design)</th>
+                    <th>After (Customised Design)</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td><strong>Sky</strong></td>
+                    <td><code>fill="#87CEEB"</code></td>
+                    <td><code>fill="#87CEEB"</code> (No change)</td>
+                </tr>
+                <tr>
+                    <td><strong>Ground</strong></td>
+                    <td><code>fill="#008000"</code></td>
+                    <td><code>fill="#32CD32"</code> (Color changed to a lighter green)</td>
+                </tr>
+                <tr>
                     <td><strong>Sun</strong></td>
-                    <td><code>cx="60", cy="60"</code></td>
-                    <td><code>cx="340", cy="50"</code> (Moved right)</td>
+                    <td><code>cx="480", cy="120", r="50", fill="#FFFF00"</code></td>
+                    <td><code>cx="480", cy="100", r="30", fill="#FFD700"</code> (Moved up, made smaller, darker yellow)</td>
+                </tr>
+                <tr>
+                    <td><strong>Sun Rays</strong></td>
+                    <td>N/A</td>
+                    <td><code>&lt;g stroke="#FFA500"&gt;</code> with 4 <code>line</code> elements (Added sun rays)</td>
                 </tr>
                 <tr>
                     <td><strong>Cloud</strong></td>
-                    <td><code>cx="300", cy="70"</code></td>
-                    <td><code>cx="100", cy="60"</code> (Moved left)</td>
-                </tr>
-                <tr>
-                    <td><strong>Bird</strong></td>
                     <td>N/A</td>
-                    <td><code>d="M 180 60 Q 190 40..."</code></td>
+                    <td><code>&lt;g fill="#FFFFFF" opacity="0.9"&gt;</code> with 3 <code>ellipse</code> elements (Added cloud)</td>
                 </tr>
                 <tr>
-                    <td><strong>Roof</strong></td>
-                    <td><code>points="100,150 200,80 300,150"</code><br><code>fill="#CD5C5C"</code></td>
-                    <td><code>points="60,160 160,90 260,160"</code><br><code>fill="#6A5ACD"</code> (Color changed)</td>
+                    <td><strong>Birds</strong></td>
+                    <td>N/A</td>
+                    <td>2 <code>path</code> elements drawing curves (Added flying birds)</td>
                 </tr>
                 <tr>
-                    <td><strong>Door</strong></td>
-                    <td><code>x="180", y="210"</code></td>
-                    <td><code>x="140", y="220"</code></td>
-                </tr>
-                <tr>
-                    <td><strong>Doorknob</strong></td>
-                    <td><code>cx="210", cy="240"</code></td>
-                    <td><code>cx="170", cy="250"</code></td>
-                </tr>
-                <tr>
-                    <td><strong>Left window</strong></td>
-                    <td><code>x="140", y="180"</code></td>
-                    <td><code>x="100", y="190"</code></td>
-                </tr>
-                <tr>
-                    <td><strong>Right window</strong></td>
-                    <td><code>x="230", y="180"</code></td>
-                    <td><code>x="190", y="190"</code></td>
+                    <td><strong>Chimney & Smoke</strong></td>
+                    <td>N/A</td>
+                    <td><code>rect fill="#A52A2A"</code> and 3 <code>circle</code>s for smoke (Added chimney system)</td>
                 </tr>
                 <tr>
                     <td><strong>Wall</strong></td>
-                    <td><code>x="120", y="150"</code><br><code>fill="#FFE4B5"</code></td>
-                    <td><code>x="80", y="160"</code><br><code>fill="#ADD8E6"</code> (Color changed)</td>
+                    <td><code>x="190", y="240", width="230", height="160", fill="#8B4513"</code></td>
+                    <td><code>x="180", y="240", width="240", height="180", fill="#FFEFD5"</code> (Wider, taller, lighter beige color, brown stroke added)</td>
                 </tr>
                 <tr>
-                    <td><strong>Pond</strong></td>
+                    <td><strong>Roof</strong></td>
+                    <td><code>points="190,240 305,120 420,240", fill="#CD853F"</code></td>
+                    <td><code>points="160,240 300,120 440,240", fill="#CD5C5C"</code> (Widened to overhang the new walls, color changed to red, stroke added)</td>
+                </tr>
+                <tr>
+                    <td><strong>Door</strong></td>
+                    <td><code>x="275", y="320", width="40", height="80", fill="#A0522D"</code></td>
+                    <td><code>x="275", y="330", width="50", height="90", fill="#8B4513"</code> (Taller, wider, moved down, darker wood color)</td>
+                </tr>
+                <tr>
+                    <td><strong>Doorknob</strong></td>
+                    <td><code>cx="305", cy="360", r="4", fill="#000000"</code></td>
+                    <td><code>cx="315", cy="380", r="5", fill="#FFD700"</code> (Moved to fit new door, changed to gold)</td>
+                </tr>
+                <tr>
+                    <td><strong>Windows</strong></td>
+                    <td>2 <code>rect</code> elements (Plain solid blue windows)</td>
+                    <td>Moved slightly, <code>stroke="#4682B4"</code> added, plus <code>line</code> elements inside to create window panes</td>
+                </tr>
+                <tr>
+                    <td><strong>Tree Trunk</strong></td>
+                    <td><code>x="120", y="300", width="20", height="100", fill="#A0522D"</code></td>
+                    <td><code>x="80", y="280", width="20", height="120", fill="#8B4513"</code> (Moved left, made taller, darker brown)</td>
+                </tr>
+                <tr>
+                    <td><strong>Tree Leaves</strong></td>
+                    <td>3 <code>circle</code> elements at <code>cx=100/160/130</code></td>
+                    <td>Moved left to match the new trunk position</td>
+                </tr>
+                <tr>
+                    <td><strong>Apples</strong></td>
                     <td>N/A</td>
-                    <td><code>cx="300", cy="320", rx="60", ry="20"</code></td>
+                    <td>3 <code>circle</code> elements <code>fill="#FF0000"</code> (Added red apples to the tree)</td>
+                </tr>
+                <tr>
+                    <td><strong>Flowers</strong></td>
+                    <td>N/A</td>
+                    <td><code>line</code> stems and <code>circle</code> petals <code>fill="#FF69B4"</code> (Added garden flowers)</td>
+                </tr>
+                <tr>
+                    <td><strong>Fence</strong></td>
+                    <td>N/A</td>
+                    <td>5 <code>rect</code> elements <code>fill="#DEB887"</code> (Added wooden fence on the right side)</td>
+                </tr>
+                <tr>
+                    <td><strong>Path/Road</strong></td>
+                    <td>2 thin <code>path</code> boundaries <code>stroke="#FFD700"</code></td>
+                    <td>1 thick solid <code>path</code> <code>stroke="#DEB887", stroke-width="40"</code> (Changed from outlines to a solid brown path)</td>
+                </tr>
+                <tr>
+                    <td><strong>Text</strong></td>
+                    <td><code>x="470", y="340", "House"</code></td>
+                    <td><code>x="480", y="550", "My Custom House"</code> (Moved to bottom right, bolded, white with black stroke)</td>
                 </tr>
             </tbody>
         </table>
     </div>
 </body>
 </html>
+
 
