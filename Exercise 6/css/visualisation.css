@@ -7,3 +7,31 @@
 rect.bar {
     shape-rendering: crispEdges;
 }
+
+/* Filter Button Styles */
+.filter-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.1s;
+}
+
+.filter-btn:hover {
+    background-color: #ccc;
+}
+
+/* Active State for Filter Buttons */
+.filter-btn.active {
+    background-color: #20B2AA;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.filter-btn:active {
+    transform: scale(0.95);
+}

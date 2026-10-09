@@ -18,3 +18,11 @@ const yScale = d3.scaleLinear();
 // 4. Bin Generator
 const binGenerator = d3.bin()
     .value(d => d.energyConsumption);
+
+// 5. Filter State Array
+const filters = [
+    { id: "all", label: "All", isActive: true },
+    { id: "LCD", label: "LCD", isActive: false },
+    { id: "LED", label: "LED", isActive: false },
+    { id: "OLED", label: "OLED", isActive: false }
+];

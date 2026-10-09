@@ -17,4 +17,8 @@ d3.csv("DATA/Ex6_TVdata_withStar.csv", d => {
     console.log("Data after removing >1800 outliers:", filteredData);
     
     drawHistogram(filteredData);
+    
+    // Call the interaction function to setup buttons and listeners
+    populateFilters(filteredData);
 });
+
