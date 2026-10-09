@@ -26,3 +26,17 @@ const filters = [
     { id: "LED", label: "LED", isActive: false },
     { id: "OLED", label: "OLED", isActive: false }
 ];
+
+// 6. Scatterplot Shared Constants (with "S" suffix to avoid collisions)
+let innerChartS; // Will be assigned in scatterplot.js
+const xScaleS = d3.scaleLinear();
+const yScaleS = d3.scaleLinear();
+
+// Colour scale for screen tech categories
+const colorScale = d3.scaleOrdinal()
+    .domain(["LCD", "LED", "OLED"])
+    .range(["#377eb8", "#4daf4a", "#ff7f00"]); // Blue, Green, Orange
+
+// Tooltip constants (prepared for 6.4)
+const tooltipWidth = 120;
+const tooltipHeight = 40;

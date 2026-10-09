@@ -20,5 +20,13 @@ d3.csv("DATA/Ex6_TVdata_withStar.csv", d => {
     
     // Call the interaction function to setup buttons and listeners
     populateFilters(filteredData);
+    
+    // Exercise 6.3: Draw the Scatterplot
+    drawScatterplot(filteredData);
+    
+    // Exercise 6.4 placeholders
+    createTooltip();
+    handleMouseEvents();
 });
+
 

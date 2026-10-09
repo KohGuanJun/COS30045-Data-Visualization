@@ -45,3 +45,12 @@ const populateFilters = (data) => {
             .attr("height", d => innerHeight - yScale(d.length));
     };
 };
+
+// Placeholder functions for Exercise 6.4 Tooltips
+const createTooltip = () => {
+    console.log("Tooltip created (Ready for Ex 6.4)");
+};
+
+const handleMouseEvents = () => {
+    console.log("Mouse events handled (Ready for Ex 6.4)");
+};
