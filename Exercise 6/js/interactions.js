@@ -46,11 +46,81 @@ const populateFilters = (data) => {
     };
 };
 
-// Placeholder functions for Exercise 6.4 Tooltips
+// Ex 6.4 Tooltips and Mouse Events
+
 const createTooltip = () => {
-    console.log("Tooltip created (Ready for Ex 6.4)");
+    // 1. Append tooltip group to innerChartS (hidden by default)
+    const tooltip = innerChartS.append("g")
+        .attr("class", "tooltip")
+        .style("opacity", 0)
+        // VERY IMPORTANT: prevents the tooltip itself from triggering mouseleave on circles
+        .style("pointer-events", "none"); 
+
+    // 2. Background rectangle
+    tooltip.append("rect")
+        .attr("width", tooltipWidth)
+        .attr("height", tooltipHeight)
+        .attr("fill", barColor)
+        .attr("opacity", 0.9) // slightly transparent
+        .attr("rx", 5) // curved corners
+        .attr("ry", 5);
+
+    // 3. Text Line 1: Brand and Model (Extension feature!)
+    tooltip.append("text")
+        .attr("class", "tooltip-text-line1")
+        .attr("x", 10)
+        .attr("y", 22)
+        .style("fill", "white")
+        .style("font-size", "14px")
+        .style("font-weight", "bold");
+
+    // 4. Text Line 2: Screen Size and Tech
+    tooltip.append("text")
+        .attr("class", "tooltip-text-line2")
+        .attr("x", 10)
+        .attr("y", 42)
+        .style("fill", "white")
+        .style("font-size", "12px");
 };
 
 const handleMouseEvents = () => {
-    console.log("Mouse events handled (Ready for Ex 6.4)");
+    // Select all circles in the scatter plot
+    innerChartS.selectAll("circle")
+        .on("mouseenter", (e, d) => {
+            // Update tooltip text using the bound data (d)
+            // Formatting the brand to start with capital letter for aesthetics
+            const brandName = d.brand.charAt(0).toUpperCase() + d.brand.slice(1);
+            d3.select(".tooltip-text-line1").text(`${brandName} (${d.model})`);
+            d3.select(".tooltip-text-line2").text(`${d.screenSize}-inch ${d.screenTech} TV`);
+
+            // Get circle coordinates using the event target (e)
+            const cx = parseFloat(e.target.getAttribute("cx"));
+            const cy = parseFloat(e.target.getAttribute("cy"));
+
+            // Move the tooltip and make it visible with a smooth transition
+            d3.select(".tooltip")
+                .attr("transform", `translate(${cx + 10}, ${cy - tooltipHeight - 10})`)
+                .transition()
+                .duration(200)
+                .style("opacity", 1);
+            
+            // Highlight the hovered circle
+            d3.select(e.target)
+                .attr("stroke", "#333")
+                .attr("stroke-width", 2)
+                .attr("opacity", 1);
+        })
+        .on("mouseleave", (e, d) => {
+            // Hide tooltip and move it far away
+            d3.select(".tooltip")
+                .transition()
+                .duration(200)
+                .style("opacity", 0)
+                .attr("transform", "translate(-999, -999)");
+            
+            // Revert circle style
+            d3.select(e.target)
+                .attr("stroke", "none")
+                .attr("opacity", 0.5);
+        });
 };

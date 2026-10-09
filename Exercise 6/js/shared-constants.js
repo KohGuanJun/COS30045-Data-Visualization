@@ -38,5 +38,6 @@ const colorScale = d3.scaleOrdinal()
     .range(["#377eb8", "#4daf4a", "#ff7f00"]); // Blue, Green, Orange
 
 // Tooltip constants (prepared for 6.4)
-const tooltipWidth = 120;
-const tooltipHeight = 40;
+const tooltipWidth = 180;
+const tooltipHeight = 55;
+
