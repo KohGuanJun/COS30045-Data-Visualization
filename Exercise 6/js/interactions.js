@@ -88,10 +88,22 @@ const handleMouseEvents = () => {
     innerChartS.selectAll("circle")
         .on("mouseenter", (e, d) => {
             // Update tooltip text using the bound data (d)
-            // Formatting the brand to start with capital letter for aesthetics
             const brandName = d.brand.charAt(0).toUpperCase() + d.brand.slice(1);
-            d3.select(".tooltip-text-line1").text(`${brandName} (${d.model})`);
-            d3.select(".tooltip-text-line2").text(`${d.screenSize}-inch ${d.screenTech} TV`);
+            
+            const line1 = d3.select(".tooltip-text-line1");
+            line1.text(`${brandName} (${d.model})`);
+            
+            const line2 = d3.select(".tooltip-text-line2");
+            line2.text(`${d.screenSize}-inch ${d.screenTech} TV`);
+
+            // DYNAMIC WIDTH CALCULATION:
+            // Get the pixel length of both lines of text to ensure the box fits perfectly
+            const textWidth1 = line1.node().getComputedTextLength();
+            const textWidth2 = line2.node().getComputedTextLength();
+            const dynamicWidth = Math.max(textWidth1, textWidth2) + 20; // 20px for left/right padding
+
+            // Update the background rectangle's width
+            d3.select(".tooltip rect").attr("width", dynamicWidth);
 
             // Get circle coordinates using the event target (e)
             const cx = parseFloat(e.target.getAttribute("cx"));
@@ -124,3 +136,4 @@ const handleMouseEvents = () => {
                 .attr("opacity", 0.5);
         });
 };
+
