@@ -1,5 +1,4 @@
-﻿/* AI-Generated: D3 Vertical Bar Chart with Axes (Ex 5.1) */
-
+﻿
 const drawBarChart = data => {
     // 1. Setup margins and dimensions
     const margin = { top: 40, right: 40, bottom: 60, left: 60 };
@@ -76,5 +75,6 @@ d3.csv("data/tv_energy.csv", d => {
     console.log("Cleaned and Sorted 55-inch TV Data:", data);
     drawBarChart(data);
 });
+
 
 

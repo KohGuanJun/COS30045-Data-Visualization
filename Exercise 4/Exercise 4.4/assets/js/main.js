@@ -1,5 +1,4 @@
-﻿/* AI-Generated: D3 setup and CSV data loading for Exercise 4.4 */
-
+﻿
 // 1. Setup the SVG Canvas (from Ex 4.3)
 const svg = d3.select(".responsive-svg-container")
   .append("svg")
@@ -36,3 +35,4 @@ d3.csv("data/tvBrandCount.csv", d => {
     // Pass data to build the visualization
     drawBarChart(data);
 });
+

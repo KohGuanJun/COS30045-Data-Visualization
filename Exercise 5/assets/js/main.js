@@ -1,5 +1,4 @@
-﻿/* AI-Generated: D3 Scaling (Ex 4.6) + Grouping & Labels (Ex 4.7) */
-
+﻿
 // 1. Setup the SVG Canvas
 const svg = d3.select(".responsive-svg-container")
   .append("svg")
@@ -64,3 +63,4 @@ d3.csv("data/tvBrandCount.csv", d => {
     data.sort((a, b) => b.count - a.count);
     drawBarChart(data);
 });
+

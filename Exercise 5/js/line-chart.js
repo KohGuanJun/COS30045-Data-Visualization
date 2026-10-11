@@ -1,5 +1,4 @@
-﻿/* AI-Generated: D3 Scatter Plot and Line Chart (Ex 5.2) */
-
+﻿
 const drawLineChart = data => {
     // 1. Setup margins and dimensions (same as Ex 5.1 for consistency)
     const margin = { top: 40, right: 40, bottom: 60, left: 60 };
@@ -91,5 +90,6 @@ d3.csv("data/ARE_Spot_Prices.csv", d => {
     console.log("Loaded Line Chart Data:", data);
     drawLineChart(data);
 });
+
 
 

@@ -1,5 +1,4 @@
-﻿/* AI-Generated: D3 Donut Chart (Ex 5.3) */
-
+﻿
 const drawDonutChart = data => {
     // 1. Setup dimensions and radius
     const width = 800;
@@ -78,3 +77,4 @@ d3.csv("data/Data_exercise 5.3.csv", d => {
     console.log("Loaded Donut Chart Data:", data);
     drawDonutChart(data);
 });
+
